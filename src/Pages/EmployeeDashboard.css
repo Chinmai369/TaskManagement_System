@@ -276,7 +276,7 @@ button:disabled {
 
 /* Inputs */
 .form-group select{  
-  /* width: 180px; */
+  width: 219px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -288,7 +288,7 @@ button:disabled {
 }
 
 .style{
-      margin-left:60px;
+      margin-left:-2px;
     margin-bottom: 4px;
 }
 .sub-style{

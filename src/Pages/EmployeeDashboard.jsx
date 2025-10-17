@@ -466,7 +466,7 @@ function EmployeeDashboard() {
             <h3>Add Report</h3>
             <form className="task-form" onSubmit={handleSubmit}>
               <div className="form-row">
-                {isAdminView && (
+                {/* {isAdminView && (
                   <div className="form-group">
                     <h5 className="style">Employee:</h5>
                     <select name="emp_code" value={selectedEmpCode} onChange={(e) => setSelectedEmpCode(e.target.value)} required>
@@ -476,7 +476,7 @@ function EmployeeDashboard() {
                       ))}
                     </select>
                   </div>
-                )}
+                )} */}
                 <div className="form-group">
                   <h5 className="style">Project:</h5>
                   <select name="project" value={form.project} onChange={handleChange} required>
