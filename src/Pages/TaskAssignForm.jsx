@@ -297,7 +297,7 @@ export default function TaskAssignForm({ setActivePage }) {
     {/* Employee Select (Admin only) */}
     
       <div className="flex flex-col min-w-[150px]">
-        <label className="mb-1 font-medium text-sm">Employee</label>
+        <label className="mb-1 font-medium text-sm text-left">Employee</label>
         <select
           name="emp_code"
           value={form.emp_code}
@@ -318,7 +318,7 @@ export default function TaskAssignForm({ setActivePage }) {
 
     {/* Project */}
     <div className="flex flex-col min-w-[150px]">
-      <label className="mb-1 font-medium text-sm">Project</label>
+      <label className="mb-1 font-medium text-sm text-left">Project</label>
       <select
         name="project"
         value={form.project}
@@ -338,7 +338,7 @@ export default function TaskAssignForm({ setActivePage }) {
 
     {/* Module */}
     <div className="flex flex-col min-w-[120px]">
-      <label className="mb-1 font-medium text-sm">Module</label>
+      <label className="mb-1 font-medium text-sm text-left">Module</label>
       <select
         name="module"
         value={form.module}
@@ -356,7 +356,7 @@ export default function TaskAssignForm({ setActivePage }) {
 
     {/* Submodule */}
     <div className="flex flex-col min-w-[120px]">
-      <label className="mb-1 font-medium text-sm">Submodule</label>
+      <label className="mb-1 font-medium text-sm text-left">Submodule</label>
       <input
         type="text"
         name="submodule"
@@ -371,7 +371,7 @@ export default function TaskAssignForm({ setActivePage }) {
 
     {/* Task Details / Remarks */}
     <div className="flex flex-col flex-1">
-      <label className="mb-1 font-medium text-sm">Remarks</label>
+      <label className="mb-1 font-medium text-sm text-left">Remarks</label>
       <input
         name="task_details"
         value={form.task_details}

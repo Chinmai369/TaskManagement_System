@@ -511,12 +511,14 @@ function EmployeeDashboard() {
 
                 <div className="form-group full-width">
                   <h5 className="rem-style">Remarks:</h5>
-                  <textarea
+                  <input
+                  type="text"
                     name="task_details"
                     value={form.task_details}
                     onChange={handleChange}
                     placeholder="Enter task details here..."
                     required
+                     className="border ml-[43%] rounded px-2 py-2 min-h-[33px] w-1/2"
                   />
                 </div>
                 <div className="form-actions">
