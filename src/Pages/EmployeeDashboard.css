@@ -318,6 +318,7 @@ textarea {
 
 /* Ensure Submodule input remains clickable in admin view */
 .form-container input[name="submodule"] {
+  margin-left: 187px;
   position: relative;
   z-index: 401; /* above .calendar-section (300) */
 }
