@@ -229,7 +229,7 @@ button:disabled {
 }
 
 .form-container {
-  width: 1044px;
+  width: 1216px;
   padding: 25px;
   background: white;
   border-radius: 12px;
@@ -531,7 +531,7 @@ text-align: left;
 .task-list-containers {
     margin: 2rem 0 2rem 0rem;
     padding: 1.5rem;
-    width: 1318px;
+    width: 1487px;
     max-width: none;
     background: #e2edf1;
     border-radius: 12px;

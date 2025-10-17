@@ -30,6 +30,7 @@ export default function AdminDashboard() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [form, setForm] = useState({
+    id:"",
     name: "",
     email: "",
     department: "",
@@ -369,6 +370,7 @@ export default function AdminDashboard() {
             </button>
             <h4 className="alignments">Add New Employee</h4>
             <form onSubmit={handleSubmit} className="empform">
+               <input type="text" name="name" placeholder="Enter employee ID" value={form.id} onChange={handleChange} required disabled={isSubmitting} />
               <input type="text" name="name" placeholder="Enter employee name" value={form.name} onChange={handleChange} required disabled={isSubmitting} />
               <input type="email" name="email" placeholder="Enter email" value={form.email} onChange={handleChange} required disabled={isSubmitting} />
               <select name="department" value={form.department} onChange={handleChange} required disabled={isSubmitting}>
