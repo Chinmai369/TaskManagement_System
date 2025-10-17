@@ -62,9 +62,9 @@ app.post("/api/login", async (req, res) => {
 
       // Fetch name/department from emp_details
       const empResult = await pool.query(
-        "SELECT name, department FROM emp_details WHERE emp_code = $1",
-        [username]
-      );
+      "SELECT name, department, position FROM emp_details WHERE emp_code = $1",
+      [username]
+    );
 
       userData = {
         id: adminUser.id,
