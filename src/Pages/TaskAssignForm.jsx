@@ -225,7 +225,7 @@ export default function TaskAssignForm({ setActivePage }) {
         ← Back to Dashboard
       </button>
 
-      <div className="form-containers">
+      {/* <div className="form-containers">
         <h3>Assign Task</h3>
         <hr />
         <form className="task-form" onSubmit={handleSubmit}>
@@ -267,6 +267,7 @@ export default function TaskAssignForm({ setActivePage }) {
             </div>
 
             <div className="form-group">
+              <label>Enter Submodule</label>
               <input type="text" name="submodule" value={form.submodule} onChange={handleChange} placeholder="Enter Submodule" required disabled={isSubmitting} />
             </div>
           </div>
@@ -284,7 +285,121 @@ export default function TaskAssignForm({ setActivePage }) {
         </form>
 
         {success && <div className="popup">✅ Task added successfully!</div>}
+      </div> */}
+
+
+{/* Task Form */}
+{/* Task Form: Single Row Layout */}
+<div className="form-containers bg-white p-4 rounded shadow-md overflow-x-auto">
+  <h3 className="text-lg font-semibold mb-3">Assign Task</h3>
+
+  <form className="flex flex-nowrap space-x-4 items-end" onSubmit={handleSubmit}>
+    {/* Employee Select (Admin only) */}
+    
+      <div className="flex flex-col min-w-[150px]">
+        <label className="mb-1 font-medium text-sm">Employee</label>
+        <select
+          name="emp_code"
+          value={form.emp_code}
+          onChange={handleChange}
+          required
+          disabled={isSubmitting}
+          className="border rounded px-2 py-2 min-h-[33px] w-full"
+        >
+          <option value="">Select Employee</option>
+          {employees.map((emp) => (
+            <option key={emp.emp_code || emp.id} value={emp.emp_code}>
+              ({emp.emp_code}) {emp.name}
+            </option>
+          ))}
+        </select>
       </div>
+
+
+    {/* Project */}
+    <div className="flex flex-col min-w-[150px]">
+      <label className="mb-1 font-medium text-sm">Project</label>
+      <select
+        name="project"
+        value={form.project}
+        onChange={handleChange}
+        required
+        disabled={isSubmitting}
+        className="border rounded px-2 py-2 min-h-[33px] w-full"
+      >
+        <option value="">-- Select Project --</option>
+        {projects.map((proj) => (
+          <option key={proj.project_id} value={proj.project_name}>
+            {proj.project_name}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    {/* Module */}
+    <div className="flex flex-col min-w-[120px]">
+      <label className="mb-1 font-medium text-sm">Module</label>
+      <select
+        name="module"
+        value={form.module}
+        onChange={handleChange}
+        required
+        disabled={isSubmitting}
+        className="border rounded px-2 py-2 min-h-[33px] w-full"
+      >
+        <option value="">-- Module --</option>
+        <option value="Module 1">Module 1</option>
+        <option value="Module 2">Module 2</option>
+        <option value="Module 3">Module 3</option>
+      </select>
+    </div>
+
+    {/* Submodule */}
+    <div className="flex flex-col min-w-[120px]">
+      <label className="mb-1 font-medium text-sm">Submodule</label>
+      <input
+        type="text"
+        name="submodule"
+        value={form.submodule}
+        onChange={handleChange}
+        placeholder="Submodule"
+        required
+        disabled={isSubmitting}
+        className="border rounded px-2 py-1.5  w-full"
+      />
+    </div>
+
+    {/* Task Details / Remarks */}
+    <div className="flex flex-col flex-1">
+      <label className="mb-1 font-medium text-sm">Remarks</label>
+      <input
+        name="task_details"
+        value={form.task_details}
+        onChange={handleChange}
+        placeholder="Task details..."
+        required
+        disabled={isSubmitting}
+        className="border rounded px-2 py-1.5 min-h-[33px] w-full"
+        rows={1}
+      />
+    </div>
+
+    {/* Submit Button */}
+    <div className="flex flex-col">
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 disabled:opacity-50"
+      >
+        {isSubmitting ? "Submitting..." : "Submit"}
+      </button>
+    </div>
+  </form>
+
+  {/* Success Message */}
+  {success && <div className="mt-2 text-green-600 font-semibold">✅ Task added successfully!</div>}
+</div>
+
 
       {/* Assigned Tasks Table Section */}
       <div className="task-list-container">
