@@ -127,7 +127,7 @@ export default function TaskAssignForm({ setActivePage }) {
       status: "Pending",
     };
 
-    if (!form.emp_code || !form.project || !form.module || !form.submodule || !form.task_details) {
+    if ( !form.project || !form.module || !form.submodule || !form.task_details) {
       alert("Please fill all fields");
       setIsSubmitting(false);
       return;
